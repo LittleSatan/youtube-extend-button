@@ -22,7 +22,8 @@ function addExtendButton(){
         content.classList.add("yt-uix-button-content");
         content.innerHTML = "Extend";
         extendButton.appendChild(content);
-        document.getElementById("watch8-secondary-actions").insertBefore(extendButton, document.getElementById("watch8-secondary-actions").children[2]);var url = window.location.href;
+        document.getElementById("watch8-secondary-actions").insertBefore(extendButton, document.getElementById("watch8-secondary-actions").children[2]);
+		var url = window.location.href;
         var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
         if(videoid !== null) {
             console.log("video id = ",videoid[1]);
@@ -35,4 +36,4 @@ function addExtendButton(){
 
 }
 
-setInterval(addExtendButton, 50);
+setInterval(addExtendButton, 300);
